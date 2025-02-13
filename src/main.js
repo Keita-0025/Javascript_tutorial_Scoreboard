@@ -1,24 +1,25 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import reset from './reset.js';
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+(() => {
+  const $result = document.getElementById('js-number');
+  const $buttons = document.getElementsByClassName('js-button');
 
-setupCounter(document.querySelector('#counter'))
+  const clickHandler =(e) => {
+    const $button = e.currentTarget
+      if ($button.textContent === '+') {
+        console.log('+')
+        $result.textContent = parseInt($result.textContent) + 1
+      } else {
+        $result.textContent = parseInt($result.textContent) - 1
+        console.log('-')
+      };
+  };
+
+  for (let i = 0; i < $buttons.length; i++) {
+    $buttons[i].addEventListener('click', clickHandler);
+  };
+
+  reset();
+})();
+
+

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+.container {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border: solid, 2px, gray;
+  &__result {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  &__button {
+    font: {
+        size: 20px;
+        weight:bold;
+    }
+    padding: 10px 20px;
+    margin: 0 10px;
+  }
+}
