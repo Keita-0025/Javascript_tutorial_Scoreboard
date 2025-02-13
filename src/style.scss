@@ -1,19 +1,55 @@
 @charset "UTF-8";
-.container {
-    text-align: center;
-    padding: 20px;
-    margin: 20px;
-    border: solid, 2px, gray;
-  &__result {
-    font-size: 50px;
-    margin-bottom: 10px;
+
+$f-l: 50px;
+$f-s: 10px;
+$b-red: red;
+$c-white: white;
+
+//ボタン
+.btn {
+  font: {
+    size: 20px;
+    weight: bold;
   }
-  &__button {
-    font: {
-        size: 20px;
-        weight:bold;
+  padding: 10px 20px;
+  margin: 0 10px;
+  &:hover {
+    opacity: 0.8;
+    transition: opacity 0.15s;
+  }
+}
+
+//得点板全体
+.scoreboard {
+  border: solid, 2px, gray;
+  display: flex;
+  justify-content: center;
+  & .divider {
+    text-align: center;
+    font-size: $f-l;
+    margin: 0 20px;
+    align-self: center;
+    margin-bottom: 70px;
+  }
+}
+
+//得点の点数
+.container {
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  &__result {
+    font-size: $f-l;
+    margin-bottom: 10px;
+    &--outcomeBtn {
+      border-radius: 50%;
+      font: {
+        size: $f-s;
+        color: $c-white;
+      }
+      padding: 1px 2px;
+      margin: 0 1px;
+      background-color: $b-red;
     }
-    padding: 10px 20px;
-    margin: 0 10px;
   }
 }

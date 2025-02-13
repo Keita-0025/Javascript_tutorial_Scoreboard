@@ -1,16 +1,41 @@
+.btn {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 0 10px;
+}
+.btn:hover {
+  opacity: 0.8;
+  transition: opacity 0.15s;
+}
+
+.scoreboard {
+  border: solid, 2px, gray;
+  display: flex;
+  justify-content: center;
+}
+.scoreboard .divider {
+  text-align: center;
+  font-size: 50px;
+  margin: 0 20px;
+  align-self: center;
+  margin-bottom: 70px;
+}
+
 .container {
   text-align: center;
   padding: 20px;
   margin: 20px;
-  border: solid, 2px, gray;
 }
 .container__result {
   font-size: 50px;
   margin-bottom: 10px;
 }
-.container__button {
-  font-size: 20px;
-  font-weight: bold;
-  padding: 10px 20px;
-  margin: 0 10px;
+.container__result--outcomeBtn {
+  border-radius: 50%;
+  font-size: 10px;
+  font-color: white;
+  padding: 1px 2px;
+  margin: 0 1px;
+  background-color: red;
 }/*# sourceMappingURL=style.css.map */
