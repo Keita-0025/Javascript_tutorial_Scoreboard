@@ -1,8 +1,12 @@
 @charset "UTF-8";
 
-$f-l: 50px;
-$f-s: 10px;
-$b-red: red;
+$f-xxl: 150px;
+$f-xl: 120px;
+$f-l: 90px;
+$f-m: 60px;
+$f-s: 30px;
+$f-xs: 15px;
+$c-red: red;
 $c-white: white;
 
 //ボタン
@@ -19,17 +23,30 @@ $c-white: white;
   }
 }
 
+
 //得点板全体
 .scoreboard {
   border: solid, 2px, gray;
   display: flex;
   justify-content: center;
-  & .divider {
-    text-align: center;
-    font-size: $f-l;
-    margin: 0 20px;
-    align-self: center;
-    margin-bottom: 70px;
+  &__main {
+    &--title {
+      text-align: center;
+      font-size: $f-m;
+      margin: 20px 0;
+    }
+    &--btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &--timer{
+        font-size: $f-s;
+        text-align: center;
+    }
+    &--container {
+      display: flex;
+    }
   }
 }
 
@@ -38,18 +55,43 @@ $c-white: white;
   text-align: center;
   padding: 20px;
   margin: 20px;
-  &__result {
-    font-size: $f-l;
-    margin-bottom: 10px;
-    &--outcomeBtn {
-      border-radius: 50%;
-      font: {
-        size: $f-s;
-        color: $c-white;
+  &__contents {
+    flex-direction: column; // 縦並びにする
+    align-items: center; 
+    justify-content: center; 
+    &--result {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: $f-l;
+      margin-bottom: 10px;
+      &--outcomeBtn {
+        border-radius: 50%;
+        font: {
+          size: $f-xs;
+          color: $c-white;
+        }
+        padding: 1px 2px;
+        margin: 0 1px;
+        background-color: $c-red;
       }
-      padding: 1px 2px;
-      margin: 0 1px;
-      background-color: $b-red;
     }
+    
   }
+}
+
+//｀ー｀
+.divider {
+  font-size: $f-xxl;
+}
+
+//win
+.win-text {
+    display: none;
+    color: $c-red;
+}
+
+//入力欄・表示欄
+.input-display {
+    font-size: $f-s;
 }

@@ -14,12 +14,22 @@
   display: flex;
   justify-content: center;
 }
-.scoreboard .divider {
+.scoreboard__main--title {
   text-align: center;
-  font-size: 50px;
-  margin: 0 20px;
-  align-self: center;
-  margin-bottom: 70px;
+  font-size: 60px;
+  margin: 20px 0;
+}
+.scoreboard__main--btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scoreboard__main--timer {
+  font-size: 30px;
+  text-align: center;
+}
+.scoreboard__main--container {
+  display: flex;
 }
 
 .container {
@@ -27,15 +37,36 @@
   padding: 20px;
   margin: 20px;
 }
-.container__result {
-  font-size: 50px;
+.container__contents {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container__contents--result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 90px;
   margin-bottom: 10px;
 }
-.container__result--outcomeBtn {
+.container__contents--result--outcomeBtn {
   border-radius: 50%;
-  font-size: 10px;
+  font-size: 15px;
   font-color: white;
   padding: 1px 2px;
   margin: 0 1px;
   background-color: red;
+}
+
+.divider {
+  font-size: 150px;
+}
+
+.win-text {
+  display: none;
+  color: red;
+}
+
+.input-display {
+  font-size: 30px;
 }/*# sourceMappingURL=style.css.map */

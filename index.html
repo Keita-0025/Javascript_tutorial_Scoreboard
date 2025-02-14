@@ -11,20 +11,52 @@
 
 <body>
   <section class="scoreboard">
-    <div class="container">
-      <div class="container__result" id="js-numberP1" data-player="1">0<button class="container__result--outcomeBtn btn"
-          type="button" id='js-outcomeP1' data-player="1">勝</button></div>
-      <button class="container__button btn js-button" type="button" data-player="1">+</button>
-      <button class="container__button btn js-button" type="button" data-player="1">-</button>
-      <button class="container__button btn" type="button" id="js-resetP1" data-player="1">reset</button>
-    </div>
-    <span class="divider">-</span>
-    <div class="container">
-      <div class="container__result" id="js-numberP2" data-player="2">0<button
-          class="container__result--outcomeBtn btn" type="button" id='js-outcomeP2' data-player="2">勝</button></div>
-      <button class="container__button btn js-button" type="button" data-player="2">+</button>
-      <button class="container__button btn js-button" type="button" data-player="2">-</button>
-      <button class="container__button btn" type="button" id="js-resetP2" data-player="2">reset</button>
+    <div class="scoreboard__main">
+      <h1 class="scoreboard__main--title">スコアボード</h1>
+      <div class="scoreboard__main--btn">
+        <button class="btn" type="button" data-action="start">start</button>
+        <button class="btn" type="button" data-action="end">end</button>
+        <button class="btn" type="button" data-action="reset">reset</button>
+      </div>
+      <div class="scoreboard__main--timer">
+        試合時間: 00:00
+      </div>
+      <div class="scoreboard__main--container">
+        <div class="container">
+          <div class="container__contents">
+            <div class="container__contents--input">
+              <input class="input-display" type="text" placeholder="チーム名を入力" id="js-inputP1" data-player="1">
+              <span class="input-display" id="js-displayValueP1" data-player="1"></span>
+            </div>
+            <div class="container__contents--result">
+              <div class="container__contents--result--num" id="js-numberP1" data-player="1">0</div>
+              <span class="win-text" id="winP1">win</span>
+            </div>
+          </div>
+          <button class="container__button btn js-button" type="button" data-player="1">+</button>
+          <button class="container__button btn js-button" type="button" data-player="1">-</button>
+          <button class="container__button btn" type="button" id="js-resetP1" data-player="1">Reset Score</button>
+        </div>
+
+        <span class="divider">-</span>
+
+        <div class="container">
+          <div class="container__contents">
+            <div class="container__contents--input">
+              <input class="input-display" type="text" placeholder="チーム名を入力" id="js-inputP2" data-player="2">
+              <span class="input-display" id="js-displayValueP2" data-player="2"></span>
+            </div>
+            <div class="container__contents--result">
+              <div class="container__contents--result--num" id="js-numberP2" data-player="2">0</div>
+              <span class="win-text" id="winP2">win</span>
+            </div>
+          </div>
+          <button class="container__button btn js-button" type="button" data-player="2">+</button>
+          <button class="container__button btn js-button" type="button" data-player="2">-</button>
+          <button class="container__button btn" type="button" id="js-resetP2" data-player="2">Reset Score</button>
+        </div>
+
+      </div>
     </div>
   </section>
   <script type="module" src="/src/js/main.js"></script>
